@@ -13,9 +13,7 @@ int getLongestCommonSubsequenceBetween(string a, string b){
                 dp[i][j] = max(dp[i-1][j],dp[i][j-1]);
             else
                 dp[i][j] = 1+dp[i-1][j-1];
-            cout<<dp[i][j]<<" ";
         }
-        cout<<endl;
     }
     return dp[a.length()][b.length()];
 }
